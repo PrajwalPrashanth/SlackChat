@@ -22,17 +22,76 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <form class="form-signin login-box">
-      <img class="mb-4" src="res/assets/app/SlackChat.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Username</label>
-      <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <!-- <div class="tab-content" id="myTabContent1">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div> -->
+  
+  <div class="container form-signin">
+    <img class="mb-4" src="res/assets/app/SlackChat.svg" alt="SlackChat Logo" width="72" height="72">
+    
+    <!-- This is the nav tab -->
+    <ul class="nav justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active h3 mb-3 font-weight-normal" id="login-div-tab" data-toggle="tab" href="#login-div" role="tab">Sign In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link h3 mb-3 font-weight-normal" id="register-div-tab" data-toggle="tab" href="#register-div" role="tab">Register</a>
+      </li>
+    </ul>
+
+    <!-- This is the nav content -->
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade show active" id="login-div">
+        <form id="login-form">
+          <!-- <h1 class="h3 mb-3 font-weight-normal">Sign in</h1> -->
+          
+          <label for="inputEmail" class="sr-only">Username</label>
+          <input type="text" id="username" class="form-control" placeholder="Username" required>
+          
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Password" required>
+  
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+      </div>
       
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <div class="tab-pane fade" id="register-div">
+        <form id="register-form">
+          <!-- <h1 class="h3 mb-3 font-weight-normal">Register</h1> -->
+  
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name">
+            </div>
+          </div>
+  
+          <label class="sr-only" for="emailReg">Email</label>
+          <input type="email" class="form-control" id="emailReg" aria-describedby="emailHelp" placeholder="Enter email">
+          
+          <label class="sr-only" for="usernameReg">Username</label>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">@</div>
+            </div>
+            <input type="text" class="form-control" id="usernameReg" placeholder="Username">
+          </div>
+  
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="passwordReg" class="form-control" placeholder="Password" required>
+        
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        </form>
+      </div>
+                      
+
+    </div>
       <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
-    </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

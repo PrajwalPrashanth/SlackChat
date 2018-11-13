@@ -13,24 +13,17 @@ body {
   background-color: #226766;
 }
 
-.login-box {
-  border-radius: 8px;
-  margin: auto;
-  /* background-color: #A8CADA; */
-  background-color: #dadada;
-  box-shadow: 0 0 10px;
-
-}
-
 .form-signin {
   width: 100%;
-  max-width: 330px;
+  max-width: 500px;
   padding: 15px;
   margin: auto;
+
+  border-radius: 8px;
+  background-color: #dadada;
+  box-shadow: 0 0 10px;
 }
-.form-signin .checkbox {
-  font-weight: 400;
-}
+
 .form-signin .form-control {
   position: relative;
   box-sizing: border-box;
@@ -38,16 +31,58 @@ body {
   padding: 10px;
   font-size: 16px;
 }
+
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.form-signin input[type="email"] {
+
+.form-signin img {
+  margin: 20px 0;
+}
+
+/*------------------------------------------- 
+FOR TAB NAV
+-------------------------------------------*/
+
+a.active {
+  border-bottom: 5px solid #707070;
+  padding-bottom: 15px;
+}
+
+/*------------------------------------------- 
+FOR LOGIN FORM
+-------------------------------------------*/
+
+#login-div {
+  max-width: 350px;
+  margin: auto;
+}
+
+#login-div input[type="text"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-signin input[type="password"] {
+
+#login-div input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+/*------------------------------------------- 
+FOR REGISTRATION FORM
+-------------------------------------------*/
+
+#register-div {
+  max-width: 400px;
+  margin: auto;
+}
+
+#register-div input[type="email"] {
+  margin: 10px 0;
+}
+
+#register-div input[type="password"] {
+  margin: 10px 0;
 }
