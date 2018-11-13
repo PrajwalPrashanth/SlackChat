@@ -9,7 +9,7 @@ $email = $_POST["email"];
 
 $registration_query = "INSERT INTO users(name, email, username, password) VALUES('$name', '$email', '$username', '$password')";
 
-if(mysqli_query ($db,$mssg))
+if(mysqli_query($db,$registration_query))
 {
 	include ''; // target page
 	echo '<script> alert("Registration Successful")</script>'; 
