@@ -7,7 +7,7 @@ $password =$_POST['password'];
 
 $password_query = "SELECT password FROM users WHERE username='$name'";
 
-$stored_password = mysqli_query($db,$sql1);
+$stored_password = mysqli_query($db,$password_query);
 
 if($password == $stored_password)
 {
@@ -16,8 +16,8 @@ if($password == $stored_password)
 }
 else
 {
-	include 'index.html'; // current webpage
-	echo '<script> alert("You have Entered Wrong Username/Password, Please Try Again!")</script>';
+	include 'index.php'; // current webpage
+	echo '<script> alert("You have Entered Wrong Username/Password, Please Try Again!")</script>'; // alert or a pop up to notify
 }
 
 ?>
