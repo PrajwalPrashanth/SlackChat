@@ -1,0 +1,114 @@
+/*--------------------------------
+COLOR SCHEME
+----------------------------------*/
+/*
+Main Blue Shade:
+#226766
+
+Greys:
+#777777
+#bbbbbb
+#444444
+#707070
+
+White:
+#ffffff 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+
+/*--------------------------------
+SETUP
+----------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 
+        /* 'Source Sans Pro', */
+        'Montserrat',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto, Oxygen,
+        Cantarell, 'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+}
+
+
+/*--------------------------------
+BASIC LAYOUT
+----------------------------------*/
+.homepage-container {
+    margin: 0;
+    padding: 0;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.homepage-container div {
+    height: 100vh;
+}
+
+/*--------------------------------
+LAYOUT DIVISIONS
+----------------------------------*/
+
+/*--------Workspace List--------*/
+
+.workspace-list-div {
+    width: 9%;
+    background-color: #101010;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 5vh;
+    font-weight: 700;
+}
+
+.workspace-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.workspace-list li {
+    /* for centering text inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #eeeeee;
+    color: #444444;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    text-decoration: none;
+    height: 60px;
+    width: 60px;
+    list-style: none;
+
+    transition: 
+        all 0.2s;
+}
+
+.workspace-list li:hover {
+    background-color: #dbdbdb;
+    color: #444444;
+    /* height: 65px; */
+    width: 80px;
+}
+
+/*--------Details Pane Div--------*/
+
+.details-div {
+    width: 21%;
+    border-right: 2px solid #226766;
+}
+
+/*--------Actual Workspace--------*/
+
+.workspace-div {
+    width: 70%;
+    display: flex;
+    align-items: center;
+}

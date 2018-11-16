@@ -17,7 +17,7 @@ if(mysqli_num_rows($recipients_id)>0)
 		$recipient_name_query = "SELECT name FROM users WHERE id='$row["user2id"]'";
 		$recipient_name = mysqli_query($db,$recipient_name_query);
 
-		echo $recipient_name.<br>; // placeholder for a button to go to a chat room with this recipient name
+		echo $recipient_name . "<br>"; // placeholder for a button to go to a chat room with this recipient name
 	}
 }
 

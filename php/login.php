@@ -10,7 +10,7 @@ $stored_password = mysqli_query($db,$password_query);
 
 if($password == $stored_password)
 {
-	include ''; // next webpage
+ header('Location: homepage.php');
 }
 else
 {
