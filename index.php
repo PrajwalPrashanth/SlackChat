@@ -37,21 +37,21 @@
     <!-- This is the nav content -->
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane fade show active" id="login-div">
-        <form id="login-form" method="POST" action="login.php">
+        <form id="login-form" method="POST" action="./php/login.php">
           <!-- <h1 class="h3 mb-3 font-weight-normal">Sign in</h1> -->
           
           <label for="inputEmail" class="sr-only">Username</label>
-          <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+          <input required type="text" id="username" name="username" class="form-control" placeholder="Username" >
           
           <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+          <input required type="password" id="password" name="password" class="form-control" placeholder="Password">
   
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign In">
         </form>
       </div>
       
       <div class="tab-pane fade" id="register-div">
-        <form id="register-form" method="POST" action="register.php">
+        <form id="register-form" method="POST" action="./php/register.php">
           <!-- <h1 class="h3 mb-3 font-weight-normal">Register</h1> -->
   
           <div class="form-row">
@@ -64,18 +64,18 @@
           </div>
   
           <label class="sr-only" for="emailReg">Email</label>
-          <input type="email" class="form-control" id="emailReg" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" class="form-control" id="emailReg" aria-describedby="emailHelp" placeholder="Enter email" name="email">
           
           <label class="sr-only" for="usernameReg">Username</label>
           <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
               <div class="input-group-text">@</div>
             </div>
-            <input type="text" class="form-control" id="usernameReg" placeholder="Username">
+            <input type="text" class="form-control" id="usernameReg" placeholder="Username" name="username">
           </div>
   
           <label for="inputPassword" class="sr-only">Password</label>
-          <input type="password" id="passwordReg" class="form-control" placeholder="Password" required>
+          <input type="password" id="passwordReg" class="form-control" placeholder="Password" name="password" required>
         
           <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
         </form>
@@ -97,3 +97,31 @@
     crossorigin="anonymous"></script>
 </body>
 </html>
+<?php
+// include './php/connect.php';
+// $db = dbconnect();
+
+// if($_SERVER["REQUEST_METHOD"] == "POST") {
+//   if (isset($_POST["username"]) && isset($_POST["password"])) {
+        
+//         // Check if username is empty
+//     $username = $_POST['username'];
+//     $password = $_POST['password'];
+
+//     $password_query = "SELECT password FROM users WHERE username='$username'";
+//     $stored_password = mysqli_query($db, $password_query);
+
+//     $result = mysqli_fetch_array($stored_password);
+
+//     if ($password == $result['password']) {
+//       session_start();
+//       $_SESSION['username'] = $username;
+//       header('Location: homepage.php');
+//     } else {
+//       // include '../index.php'; // current webpage
+//       echo '<script> alert("You Have Entered Wrong Username/Password, Please Try Again!")</script>'; // alert or a pop up to notify
+//       // header("Location: ../index.php");
+
+//     }
+//   }
+?>

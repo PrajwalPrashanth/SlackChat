@@ -222,6 +222,10 @@ LAYOUT DIVISIONS
     border-radius: 10px;
     box-shadow: 0 0 10px #22676699;
 }
+.messages-box .iframe {
+    width: 100%;
+    height: 100%;
+}
 
 .input-div {
     height: 10vh;

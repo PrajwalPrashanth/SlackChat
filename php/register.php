@@ -16,7 +16,8 @@ if(mysqli_query($db,$registration_query))
 }
 else
 {
-	include 'index.php'; //current page
+	// include '../index.php'; //current page
+	header("Location: ../index.php");
 	echo '<script> alert("Registration Unsuccessful")</script>'; 
 }
 ?>

@@ -1,3 +1,12 @@
+<? php
+//start session, if it exists
+  // session_start();
+
+  // if(!isset($_SESSION['username'])){ 
+  //     header("Location: ../index.php");
+  //   }
+  // $username = $_POST['username'];
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -72,15 +81,16 @@
             <h2>Workspace Name</h2>
           </div>
           <div class="messages-div">
-            <div class="messages-box">
-
+            <div class="messages-box" id="messages-box">
+              <iframe id="message-iframe" class="iframe" src="messages.php" frameborder="0" width="100" height="100"></iframe>
             </div>
           </div>
         </div>
-        <div class="input-div">
-          <input type="text" placeholder="Send a message">
-          <button click="sendMessage"><i class="material-icons">send</i></button>
-        </div>
+        <form class="input-div" action="./sendmessage.php" method="POST">
+          <input required type="text" placeholder="Send a message" name="message">
+          <input type="hidden" name="username" value="<?php echo $username ?>">
+          <button type="submit"><i class="material-icons">send</i></button>
+        </form>
       </div>
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -89,6 +99,13 @@
         crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+      <script>
+        
+        // $(window).load(function () {
+        //   var $contents = $('#message-iframe').contents();
+        //   $contents.scrollTop($contents.height());
+        // });
+      </script>
     </div>
   </body>
 
