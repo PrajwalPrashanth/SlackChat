@@ -17,46 +17,51 @@
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
   crossorigin="anonymous">
   <!-- Font Awesome -->
-  <link rel="stylesheet" 
+  <!-- <link rel="stylesheet" 
   href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
   integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-  crossorigin="anonymous">
+  crossorigin="anonymous"> -->
+  <!-- Google Web Fonts  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Local Styles -->
   <link rel="stylesheet" href="../res/styles/app/homepage.css">
 </head>
 <body>
   <div class="homepage-container">
-    <div class="height-100 workspace-list-div">
-      <div class="workspace-list">
-        <span>GN</span>
-        <span>WS1</span>
-        <span>WS2</span>
-        <span>RN</span>
-        <span>AB</span>
-        <span>XZ</span>
-      </div>
-    </div>
-
-    <div class="height-100 details-div ">
+    <div class="height-100 left-pane">
       <div class="name-div">
         <h1 class="name">
           Hello, Pavan
         </h1>
         <p class="username">@pavanpej</p>
       </div>
-      <div class="msg-details-div">
-        <div class="channels">
-          <h2 class="channel-header">Channels</h2>
-          <div class="channel-list">
-            <label class="channel-name">#general</label>
-            <label class="channel-name">#random</label>
-            <label class="channel-name">#banter</label>
-            <label class="channel-name">#foo</label>
-            <label class="channel-name">#reallylongchannelname</label>
+      <div class="details">
+
+        <div class="workspace-list-div">
+          <div class="workspace-list">
+            <span>GN</span>
+            <span>WS1</span>
+            <span>WS2</span>
+            <span>RN</span>
+            <span>AB</span>
+            <span>XZ</span>
+          </div>
+        </div>
+    
+        <div class="channel-details-div">
+          <div class="channels">
+            <h2 class="channel-header">Channels</h2>
+            <div class="channel-list">
+              <label class="channel-name">#general</label>
+              <label class="channel-name">#random</label>
+              <label class="channel-name">#banter</label>
+              <label class="channel-name">#foo</label>
+              <label class="channel-name">#reallylongchannelname</label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
 
     <div class="height-100 workspace-div">
       <div class="workspace-main">
@@ -71,7 +76,7 @@
       </div>
       <div class="input-div">
         <input type="text" placeholder="Send a message">
-        <button click="sendMessage"><i class="fas fa-paper-plane"></i></button>
+      <button click="sendMessage"><i class="material-icons">send</i></button>
       </div>
     </div>
     <!-- <div class="workspace-div">
