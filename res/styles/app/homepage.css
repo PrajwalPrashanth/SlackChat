@@ -10,13 +10,13 @@ Greys:
 #bbbbbb
 #444444
 #707070
+#101010
 
 White:
 #ffffff 
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700'); */
 
 /*--------------------------------
 SETUP
@@ -26,11 +26,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 
-        /* 'Source Sans Pro', */
-        'Montserrat',
+        /* 'Montserrat', */
+        'Segoe UI',
         -apple-system,
         BlinkMacSystemFont,
-        'Segoe UI',
         Roboto, Oxygen,
         Cantarell, 'Open Sans',
         'Helvetica Neue',
@@ -48,7 +47,7 @@ BASIC LAYOUT
     display: flex;
 }
 
-.homepage-container div {
+.homepage-container .height-100 {
     height: 100vh;
 }
 
@@ -59,10 +58,9 @@ LAYOUT DIVISIONS
 /*--------Workspace List--------*/
 
 .workspace-list-div {
-    width: 9%;
-    background-color: #101010;
+    width: 6%;
+    background-color: #226766;
     display: flex;
-    align-items: flex-start;
     padding-top: 5vh;
     font-weight: 700;
 }
@@ -70,45 +68,141 @@ LAYOUT DIVISIONS
 .workspace-list {
     display: flex;
     flex-direction: column;
+    margin: auto;
 }
 
-.workspace-list li {
-    /* for centering text inside */
+.workspace-list span {
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: #eeeeee;
     color: #444444;
-    border-radius: 8px;
-    margin-bottom: 2em;
-    text-decoration: none;
-    height: 60px;
-    width: 60px;
-    list-style: none;
 
-    transition: 
-        all 0.2s;
+    border-radius: 14px;
+    padding: 1.8em;
+    text-decoration: none;
+    height: 45px;
+    width: 45px;
+
+    transition: all 0.2s;
+    margin-bottom: 0.8em;
+    border: 2px solid #eeeeee;
 }
 
-.workspace-list li:hover {
-    background-color: #dbdbdb;
-    color: #444444;
-    /* height: 65px; */
-    width: 80px;
+.workspace-list span:hover {
+    background-color: #226766;
+    color: #cccccc;
+    border: 2px solid #cccccc;
 }
 
 /*--------Details Pane Div--------*/
 
 .details-div {
-    width: 21%;
-    border-right: 2px solid #226766;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-div {
+    height: 12vh;
+    padding: 0.5em;
+    background-color: #226766;
+    color: #fff;
+}
+
+.name {
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-left: 0.2em;
+}
+
+.username {
+    margin-left: 0.5em;
+    font-size: 95%;
+}
+
+.msg-details-div {
+    height: 88vh;
+    border-right: 3px solid #22676699;
+}
+
+
+.channel-header {
+    border-bottom: 3px solid #22676699;
+    padding: 0.2em;
+    padding-left: 0.5em;
+}
+
+.channel-list {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-left: 1.2em;
+}
+
+.channel-list label{
+    transition: all 0.3s;
+    font-size: 15pt;
+}
+
+.channel-list label:hover {
+    border-left: 5px solid #226766;
+    padding-left: 0.6em;
+    background-color: #2267661a;
+}
+
+.channel-name {
+    color: #444444;
 }
 
 /*--------Actual Workspace--------*/
 
 .workspace-div {
-    width: 70%;
+    width: 76%;
+    /* background-color: #226766; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.workspace-main {
+    height: 90vh;
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* border-bottom: 3px solid #226766; */
+}
+
+.workspace-name {
+    height: 8vh;
+    display: block;
+    /* border-bottom: 3px solid #226766; */
+    
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+.messages-div {
+    height: 84vh;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.messages-box {
+    margin: auto;
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+    /* border: 3px solid #226766; */
+    box-shadow: 0 0 10px #cdcdcd;
+}
+.input-div {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-div input {
+    margin: 1em 2em;
 }

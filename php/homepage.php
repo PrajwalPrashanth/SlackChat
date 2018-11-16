@@ -16,27 +16,68 @@
   <link rel="stylesheet" 
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
   crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" 
+  href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+  integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+  crossorigin="anonymous">
   <!-- Local Styles -->
   <link rel="stylesheet" href="../res/styles/app/homepage.css">
 </head>
 <body>
   <div class="homepage-container">
-    <div class="workspace-list-div">
-      <ul class="workspace-list">
-        <li>GN</li>
-        <li>WS1</li>
-        <li>WS2</li>
-        <li>RN</li>
-        <li>AB</li>
-        <li>XZ</li>
-      </ul>
+    <div class="height-100 workspace-list-div">
+      <div class="workspace-list">
+        <span>GN</span>
+        <span>WS1</span>
+        <span>WS2</span>
+        <span>RN</span>
+        <span>AB</span>
+        <span>XZ</span>
+      </div>
     </div>
-    <div class="details-div">
 
+    <div class="height-100 details-div ">
+      <div class="name-div">
+        <h1 class="name">
+          Hello, Pavan
+        </h1>
+        <p class="username">@pavanpej</p>
+      </div>
+      <div class="msg-details-div">
+        <div class="channels">
+          <h2 class="channel-header">Channels</h2>
+          <div class="channel-list">
+            <label class="channel-name">#general</label>
+            <label class="channel-name">#random</label>
+            <label class="channel-name">#banter</label>
+            <label class="channel-name">#foo</label>
+            <label class="channel-name">#reallylongchannelname</label>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="workspace-div">
+
+    <div class="height-100 workspace-div">
+      <div class="workspace-main">
+        <div class="workspace-name">
+          <h2>Workspace Name</h2>
+        </div>
+        <div class="messages-div">
+          <div class="messages-box">
+            
+          </div>
+        </div>
+      </div>
+      <div class="input-div">
+        <input type="text" placeholder="Send a message">
+        <button click="sendMessage"><i class="fas fa-paper-plane"></i></button>
+      </div>
     </div>
-  </div>
+    <!-- <div class="workspace-div">
+      
+    </div>
+  </div> -->
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
