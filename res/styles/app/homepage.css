@@ -17,10 +17,10 @@ White:
 */
 
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700'); */
-
 /*--------------------------------
 SETUP
 ----------------------------------*/
+
 
 body {
     margin: 0;
@@ -270,4 +270,86 @@ LAYOUT DIVISIONS
 
 .input-div button i {
     font-size: 28pt;
+}
+
+/*--------------------------------
+Media Queries
+----------------------------------*/
+
+@media screen and (max-width: 1024px)
+{
+    /*--------Whole Left Pane--------*/
+
+    .left-pane
+    {
+        width: 30%;
+    }
+
+    .details 
+    {
+        height: 92vh;
+    }
+
+    /*--------Name Div--------*/
+
+    .name-div 
+    {
+        height: 8vh;
+    }
+
+    .name 
+    {
+        font-weight: 450;
+        margin-left: 0.1em;
+        font-size: 25px;
+    }
+
+    .username
+    {
+        margin-left: 0.4em;
+        font-size: 95%;
+    }
+
+    /*--------Workspace List--------*/
+
+    .workspace-list-div 
+    {
+        font-weight: 600;
+        padding-top: 3.5vh;
+    }
+
+    .workspace-list span 
+    {
+        border-radius: 15px;
+        padding: 1.5em;
+        height: 28px;
+        width: 28px;
+    }
+
+    /*--------Channel Pane Div--------*/
+
+   .channel-header 
+   {
+        padding: 0 0 0.45em 0.45em;
+        font-weight: 300;
+        font-size: 17pt;
+    }
+
+    .channel-list 
+    {
+        padding-left: 1em;
+    }
+
+    .channel-list label
+    {
+        font-size: 11pt;
+        overflow-wrap: break-word;
+    }
+
+    /*----- Actual Workspace-----*/
+
+    .workspace-div 
+    {
+        width: 70%;
+    }
 }
