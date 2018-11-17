@@ -1,4 +1,4 @@
-<? php
+<?php
 //start session, if it exists
   // session_start();
 
@@ -43,9 +43,16 @@
       <div class="height-100 left-pane">
         <div class="name-div">
           <h1 class="name">
-            Hello, Pavan
+            Hello,
+            <?php 
+              $query = "SELECT name FROM users WHERE username='$username'";
+              $result = mysqli_fetch_assoc(mysqli_query($db,$query));
+              $full_name =$result['name'];
+              $first_name = explode(' ', $full_name)[0];
+              echo $first_name;
+             ?>
           </h1>
-          <p class="username">@pavanpej</p>
+          <p class="username"><?php echo "@".$username ?></p>
         </div>
         <div class="details">
 
