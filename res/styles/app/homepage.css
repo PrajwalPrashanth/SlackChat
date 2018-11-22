@@ -159,16 +159,30 @@ LAYOUT DIVISIONS
     padding-left: 1.2em;
 }
 
-.channel-list label{
+.channel-list form{
     margin-bottom: 0.5em;
     transition: all 0.3s;
     font-size: 15pt;
 }
 
-.channel-list label:hover {
+.channel-list form:hover {
     border-left: 5px solid #226766;
     padding-left: 0.6em;
     background-color: #2267661a;
+}
+
+.channel-list input {
+    text-align: start;
+    border: none;
+    background-color: transparent;
+}
+
+.channel-list p {
+    display: inline;
+}
+
+.channel-list input:hover {
+    cursor: pointer;
 }
 
 .channel-name {
@@ -269,7 +283,7 @@ LAYOUT DIVISIONS
 }
 
 .input-div button i {
-    font-size: 28pt;
+    font-size: 20pt;
 }
 
 /*--------------------------------
@@ -307,6 +321,7 @@ Media Queries
     .username
     {
         margin-left: 0.4em;
+        margin-top: 0.1em;
         font-size: 95%;
     }
 
@@ -340,7 +355,7 @@ Media Queries
         padding-left: 1em;
     }
 
-    .channel-list label
+    .channel-list input
     {
         font-size: 11pt;
         overflow-wrap: break-word;

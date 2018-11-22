@@ -1,11 +1,21 @@
 <?php
 //start session, if it exists
-  // session_start();
 
-  // if(!isset($_SESSION['username'])){ 
-  //     header("Location: ../index.php");
-  //   }
-  // $username = $_POST['username'];
+if (session_status() == PHP_SESSION_NONE || session_id() == '') {
+  session_start();
+  $_SESSION['channel_name'] = 'messages_general';
+}
+
+if (isset($_POST['channel_name'])) {
+  $channel = $_POST['channel_name'];
+} else {
+  $channel = $_SESSION['channel_name'];
+}
+
+// if(!isset($_SESSION['username'])){ 
+//     header("Location: ../index.php");
+//   }
+// $username = $_POST['username'];
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -71,11 +81,12 @@
             <div class="channels">
               <h2 class="channel-header">Channels</h2>
               <div class="channel-list">
-                <label class="channel-name">#general</label>
-                <label class="channel-name">#random</label>
-                <label class="channel-name">#banter</label>
-                <label class="channel-name">#foo</label>
-                <label class="channel-name">#reallylongchannelname</label>
+                <form action="messages.php" target="message-iframe" class="channel-name" method="POST">
+                  <p>#</p><input type="submit" name="channel_name" value="general">
+                </form>
+                <form action="messages.php" target="message-iframe" class="channel-name" method="POST">
+                  <p>#</p><input type="submit" name="channel_name" value="random">
+                </form>
               </div>
             </div>
           </div>
@@ -89,13 +100,15 @@
           </div>
           <div class="messages-div">
             <div class="messages-box" id="messages-box">
-              <iframe id="message-iframe" class="iframe" src="messages.php" frameborder="0" width="100" height="100"></iframe>
+              <iframe name="message-iframe" id="message-iframe" class="iframe" src="messages.php" frameborder="0" width="100" height="100"></iframe>
             </div>
           </div>
         </div>
         <form class="input-div" action="./sendmessage.php" method="POST">
           <input required type="text" placeholder="Send a message" name="message">
           <input type="hidden" name="username" value="<?php echo $username ?>">
+          <!-- <input type="hidden" name="channel_name" value="<?php echo $channel; ?>"> -->
+          <input type="hidden" name="channel_name" value="messages_general">
           <button type="submit"><i class="material-icons">send</i></button>
         </form>
       </div>

@@ -8,8 +8,12 @@ include 'connect.php';
 // $username = $_SESSION['username'];
 $db = dbconnect();
 
-$channel = 'messages_general';
-$sql = "SELECT * FROM messages_general";
+if (isset($_POST['channel_name'])) {
+  $_SESSION['channel_name'] = $_POST['channel_name'];
+}
+
+$channel = 'messages_' . $_SESSION['channel_name'];
+$sql = "SELECT * FROM $channel";
 
 $result = mysqli_query($db, $sql);
 
@@ -35,12 +39,6 @@ if (mysqli_num_rows($result) > 0) {
   <title>Some title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="../res/styles/app/messages.css" />
-  <script>
-     function pageScroll() { 
-       window.scrollTo(0,100vh); 
-       scrolldelay = setTimeout('pageScroll()',1); //Increase this # to slow down, decrease to speed up scrolling 
-      }
-  </script>
 </head>
 <body>
   
