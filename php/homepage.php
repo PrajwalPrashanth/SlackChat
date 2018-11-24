@@ -82,10 +82,10 @@ if (isset($_POST['channel_name'])) {
               <h2 class="channel-header">Channels</h2>
               <div class="channel-list">
                 <form action="messages.php" target="message-iframe" class="channel-name" method="POST">
-                  <p>#</p><input type="submit" name="channel_name" value="general">
+                  <p>#</p><input type="submit" name="channel_name" value="general" id="general">
                 </form>
                 <form action="messages.php" target="message-iframe" class="channel-name" method="POST">
-                  <p>#</p><input type="submit" name="channel_name" value="random">
+                  <p>#</p><input type="submit" name="channel_name" value="random" id = "random">
                 </form>
               </div>
             </div>
@@ -108,7 +108,7 @@ if (isset($_POST['channel_name'])) {
           <input required type="text" placeholder="Send a message" name="message">
           <input type="hidden" name="username" value="<?php echo $username ?>">
           <!-- <input type="hidden" name="channel_name" value="<?php echo $channel; ?>"> -->
-          <input type="hidden" name="channel_name" value="messages_general">
+          <input type="hidden" name="channel_name" value="messages_general" id="channel">
           <button type="submit"><i class="material-icons">send</i></button>
         </form>
       </div>
@@ -121,10 +121,16 @@ if (isset($_POST['channel_name'])) {
         crossorigin="anonymous"></script>
       <script>
         
-        // $(window).load(function () {
-        //   var $contents = $('#message-iframe').contents();
-        //   $contents.scrollTop($contents.height());
-        // });
+document.getElementById("general").addEventListener("click",
+          function () {
+            document.getElementById("channel").value = "messages_general";
+          }
+        )
+document.getElementById("random").addEventListener("click",
+              function () {
+                document.getElementById("channel").value = "messages_random";
+              }
+            )
       </script>
     </div>
   </body>

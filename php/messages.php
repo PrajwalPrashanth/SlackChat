@@ -7,6 +7,7 @@ include 'connect.php';
 // }
 // $username = $_SESSION['username'];
 $db = dbconnect();
+error_reporting(0);
 
 if (isset($_POST['channel_name'])) {
   $_SESSION['channel_name'] = $_POST['channel_name'];
