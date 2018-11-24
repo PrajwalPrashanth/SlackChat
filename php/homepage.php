@@ -85,7 +85,7 @@ if (isset($_POST['channel_name'])) {
                   <p>#</p><input type="submit" name="channel_name" value="general" id="general">
                 </form>
                 <form action="messages.php" target="message-iframe" class="channel-name" method="POST">
-                  <p>#</p><input type="submit" name="channel_name" value="random" id = "random">
+                  <p>#</p><input type="submit" name="channel_name" value="random" id="random">
                 </form>
               </div>
             </div>
@@ -107,8 +107,7 @@ if (isset($_POST['channel_name'])) {
         <form class="input-div" action="./sendmessage.php" method="POST">
           <input required type="text" placeholder="Send a message" name="message">
           <input type="hidden" name="username" value="<?php echo $username ?>">
-          <!-- <input type="hidden" name="channel_name" value="<?php echo $channel; ?>"> -->
-          <input type="hidden" name="channel_name" value="messages_general" id="channel">
+          <input type="hidden" name="channel_name" value="messages_general" id="channel_name">
           <button type="submit"><i class="material-icons">send</i></button>
         </form>
       </div>
@@ -120,17 +119,19 @@ if (isset($_POST['channel_name'])) {
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
       <script>
-        
-document.getElementById("general").addEventListener("click",
-          function () {
-            document.getElementById("channel").value = "messages_general";
-          }
-        )
-document.getElementById("random").addEventListener("click",
-              function () {
-                document.getElementById("channel").value = "messages_random";
-              }
-            )
+      let channel_name = document.getElementById("channel_name")
+      
+      document.getElementById("general").addEventListener("click",
+        function () {
+          channel_name.value = "messages_general";
+        }
+      );
+      
+      document.getElementById("random").addEventListener("click",
+        function () {
+          channel_name.value = "messages_random";
+        }
+      );
       </script>
     </div>
   </body>
