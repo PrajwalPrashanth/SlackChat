@@ -17,8 +17,12 @@ $db = dbconnect();
       // header('Location: homepage.php');
     } else {
       // include '../index.php'; // current webpage
-      echo '<script> alert("You Have Entered Wrong Username/Password, Please Try Again!")</script>'; // alert or a pop up to notify
-      header("Location: ../index.php");
+      echo '<script> 
+      alert("You Have Entered Wrong Username/Password, Please Try Again!")
+      window.location = "../index.php";
+      </script>
+      '; // alert or a pop up to notify
+      // header("Location: ../index.php");
     }
 //   }
 // }
